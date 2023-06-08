@@ -25,13 +25,14 @@ function handClick(event) {
 }
 
 function updateSquare(position) {
+
     let square = document.getElementById(position.toString())
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
 }
 
 function atualizar() {
-    
+
     let squares = document.querySelectorAll(".square");
 
     squares.forEach((square) => {
@@ -41,10 +42,12 @@ function atualizar() {
 }
 
 function restart() {
+    
     board = ["", "", "", "", "", "", "", "", "",];
     playerTime = 0;
     gameOver = false;
     atualizar()
 }
+
 
 
